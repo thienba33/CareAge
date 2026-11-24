@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* Bảng màu CareAge (xanh ngọc) — khớp src/theme/colors.ts của app. */
+@theme {
+  --color-primary: #0fae94;
+  --color-primary-dark: #0b8c79;
+  --color-primary-light: #e6fbf6;
+  --color-canvas: #fafaf7;
+  --color-ink: #1e1e1e;
+  --color-muted: #6b6b6b;
+  --color-line: #e3e1da;
+  --color-danger: #dc2626;
+  --color-danger-light: #fdecec;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #b45309;
+  --color-warning-light: #fef3c7;
+  --color-info: #0284c7;
+  --color-info-light: #eaf2fb;
+  --color-success: #16a34a;
+  --color-success-light: #e7f6ec;
+  --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+/* Thẻ giống thẻ trên app mobile: nền trắng, bo 16px, bóng rất nhẹ + viền mảnh nhạt. */
+@utility shadow-card {
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.04),
+    0 2px 8px rgb(0 0 0 / 0.05);
+}
+@utility card {
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 1px solid rgb(227 225 218 / 0.7);
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.04),
+    0 2px 8px rgb(0 0 0 / 0.05);
+}

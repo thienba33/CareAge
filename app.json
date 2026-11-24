@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "CareAge",
+    "slug": "CareAge",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "CareAge cần quyền đọc dữ liệu nhịp tim, huyết áp, SpO2, thân nhiệt, bước chân và giấc ngủ từ Apple Health để theo dõi sức khỏe của bạn.",
+        "NSHealthUpdateUsageDescription": "CareAge cần quyền đồng bộ chỉ số sức khỏe với Apple Health.",
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "entitlements": {
+        "com.apple.developer.healthkit": true,
+        "com.apple.developer.healthkit.access": []
+      },
+      "bundleIdentifier": "com.viet2004pka.CareAge"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/logo.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.health.READ_HEART_RATE",
+        "android.permission.health.READ_OXYGEN_SATURATION",
+        "android.permission.health.READ_BLOOD_PRESSURE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-notifications",
+        {
+          "color": "#0FAE94",
+          "defaultChannel": "reminders"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "CareAge dùng vị trí của bạn để gửi cho người thân khi bạn bấm nút khẩn cấp (SOS)."
+        }
+      ],
+      "expo-status-bar",
+      "expo-font",
+      [
+        "react-native-health",
+        {
+          "isClinicalDataEnabled": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "bbea7a77-6719-4866-b4e4-0f4046210676"
+      }
+    },
+    "owner": "viet2004pka"
+  }
+}
